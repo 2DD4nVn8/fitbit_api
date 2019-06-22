@@ -3,8 +3,8 @@ import datetime
 import pandas as pd
 from ast import literal_eval
 
-CLIENT_ID     = "22DDQY" # 自分のやつを入れる。
-CLIENT_SECRET = "9abd51cb2f494de76842f1490d266dfe" # 自分のやつを入れる。
+CLIENT_ID     = "22DDQY" 
+CLIENT_SECRET = "9abd51cb2f494de76842f1490d266dfe" 
 TOKEN_FILE    = "fitbit_token.txt"
 
 tokens = open(TOKEN_FILE).read()
@@ -23,7 +23,7 @@ client = fitbit.Fitbit(CLIENT_ID, CLIENT_SECRET, access_token = access_token, re
 #TODAY = datetime.date.today()
 TODAY = "2018-12-12"
 
-#データの取得
+
 DATE = TODAY
 #heart rate
 data_hr_sec = client.intraday_time_series("activities/heart", DATE, detail_level="1sec")
